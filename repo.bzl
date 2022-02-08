@@ -23,8 +23,6 @@ _known_archives = {
 def _os_key(os):
     if os.name.find("windows") != -1:
         return "windows64"
-    elif os.name.find("linux") != -1:
-        return "linux64"
     return os.name
 
 def _get_winrar_archive(rctx):
