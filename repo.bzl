@@ -42,7 +42,7 @@ def _get_winrar_archive(rctx):
 def _winrar_repository(rctx):
     archive = _get_winrar_archive(rctx)
     rctx.download_and_extract(archive.urls, output = rctx.attr.winrar_version, stripPrefix = archive.strip_prefix, sha256 = archive.sha256)
-    rctx.file("BUILD.bazel", archive.build_file_content.format(winrar_VERSION = rctx.attr.winrar_version), executable = False)
+    rctx.file("BUILD.bazel", archive.build_file_content.format(WINRAR_VERSION = rctx.attr.winrar_version), executable = False)
 
 winrar_repository = repository_rule(
     implementation = _winrar_repository,
