@@ -10,7 +10,6 @@ _known_archives = {
     "5.9.1": {
         "windows64": struct(
             urls = [
-                "http://pan.aqrose.com/seafhttp/files/a4e9bfb2-5656-4546-bcae-eb269c611be0/WinRAR5.9.1_x64.zip",
                 "https://github.com/Zeratul-Aiur/rules_winrar/releases/download/v0.1.0/WinRAR5.9.1_x64.zip",
             ],
             strip_prefix = "WinRAR",
