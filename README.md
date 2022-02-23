@@ -17,6 +17,14 @@ load("@rules_winrar//:repo.bzl", "winrar_repository")
 winrar_repository(name = "winrar")
 ```
 
+## Usage
+
+Run winrar through bazel.
+
+```sh
+bazel run @winrar//:winrar -- a test.zip .\test\
+```
+
 ## LICENSE
 
 MIT
