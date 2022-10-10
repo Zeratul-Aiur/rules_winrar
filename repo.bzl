@@ -20,7 +20,7 @@ _known_archives = {
 }
 
 def _os_key(os):
-    if os.name.find("windows") != -1:
+    if os.name.lower().startswith("windows"):
         return "windows64"
     return os.name
 
@@ -34,7 +34,7 @@ def _get_winrar_archive(rctx):
     archive = archives.get(_os_key(rctx.os))
 
     if not archive:
-        fail("rules_winrar unknown winrar version / operating system combo: winrar_version={} os=".format(winrar_version, rctx.os.name))
+        fail("rules_winrar unknown winrar version / operating system combo: winrar_version = {} os = {}".format(winrar_version, rctx.os.name))
 
     return archive
 
